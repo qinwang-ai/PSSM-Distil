@@ -13,20 +13,20 @@ The paper "PSSM-Distil: Protein Secondary Structure Prediction (PSSP) on Low-Qua
 
     python inference_real.py
     
-Aboving commend will predict secondary 
-structure of sequence in 'sequences' folder with pssm in 'low_pssm' folder and print the accuracy.
+Aboving command will predict secondary structure for a sequence in 'sequences' folder with a pssm in 'low_pssm' folder and print the accuracy.
 
     python inference_our.py
     
-Aboving commend will sample MSAs from a specifical PSSM file. Then 2000 MSAs will save in 'a3ms' folder.
+Aboving command will predict secondary structure of sequence in 'sequences' folder with enhanced pssm which refined by PSSM-Distil and print the accuracy. 
+Besides, this command will save an enhanced pssm file in 'enhanced_pssms' folder.
 
     python sample_msa_from_pssm.py ./enhanced_pssms/4ynhA.npy
     
-Aboving commend will sample 2000 MSAs from enhanced PSSM and save in a3ms folder as '4ynhA_enhanced_pssms.a3m'.
+Aboving command will sample 2000 MSAs from enhanced PSSM and save in a3ms folder as '4ynhA_enhanced_pssms.a3m'.
 
 > Visualization
 
-Please upload original low-quality '.a3m' file in 'a3ms' folder and enhanced one in 'a3ms' folder to the website: https://weblogo.berkeley.edu/logo.cgi respectively.
+Please upload original low-quality .a3m file and the enhanced one in 'a3ms' folder to the website: https://weblogo.berkeley.edu/logo.cgi respectively.
 Then you will see such comparison images.
 
 <img src="./img/file5ca7md.png" width="500px" alt='low real PSSM'/>
