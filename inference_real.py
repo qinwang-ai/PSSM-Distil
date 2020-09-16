@@ -12,8 +12,7 @@ import numpy as np
 import torch.nn.functional as F
 
 def try_get_pretrained(ssenet, scratch=False):
-    # ssenet_path = config.pretrain_path + 'ssenet_real_ref90_psm.pth'
-    ssenet_path = config.pretrain_path + 'ssenet_real_ref90_psm8.pth'
+    ssenet_path = config.pretrain_path + 'ssenet_real_ref90_psm.pth'
 
     import torch.nn.init as init
     from models.weight_initializer import Initializer
@@ -61,7 +60,7 @@ def test_sse(val_loader, ssenet):
         feature_all.append(feature)
 
     feature_all = np.concatenate(feature_all, axis=0)
-    np.save('./logs/ssenet_real.npy', feature_all)
+    # np.save('./logs/ssenet_real.npy', feature_all)
 
     # statistic
     summary_np = np.array(summary).mean()
@@ -69,11 +68,11 @@ def test_sse(val_loader, ssenet):
 
 
 if __name__ == '__main__':
-    psm_files = '/data/proli/raw_data/visualization/low_pssm/*.npy'
+    psm_files = './low_pssms/*.npy'
     sse_dataset = SSEDataset(psm_files,
-                             config.psm_real_data_path_prefix.replace('real', 'fake'),
-                             config.sequence_data_path_prefix.replace('train', 'valid'),
-                             config.label_data_path_prefix.replace('train', 'valid'))
+                             config.psm_fake_data_path_prefix,
+                             config.sequence_data_path_prefix,
+                             config.label_data_path_prefix,)
     sse_loader = DataLoader(sse_dataset, batch_size=1, num_workers=config.batch_size,
                             collate_fn=sse_dataset.collate_fn, shuffle=False)
 

@@ -13,9 +13,9 @@ import torch.nn.functional as F
 
 
 def try_get_pretrained(teacher, student, generator, scratch=False):
-    teacher_path = '../module/teacher_our_ref908.pth'
-    student_path = '../module/student_our_ref908.pth'
-    generator_path = '../module/generator_our_ref908.pth'
+    teacher_path = './module/teacher_our_ref90.pth'
+    student_path = './module/student_our_ref90.pth'
+    generator_path = './module/generator_our_ref90.pth'
 
     student.init_weights()
     teacher.init_weights()
@@ -59,7 +59,7 @@ def get_mse_loss(sequence, low_psm, real_psm):
     return mse_loss
 
 def save_pssm_file(filename, pssm):
-    save_path = '/data/proli/raw_data/visualization/enhanced_pssm/'+ filename + '.npy'
+    save_path = './enhanced_pssms/'+ filename + '.npy'
     np.save(save_path, pssm)
     print(save_path, 'saved')
 
@@ -90,20 +90,19 @@ def inference(val_loader, generator, student):
 
     label_all = np.concatenate(label_all, axis=0)
     feature_all = np.concatenate(feature_all, axis=0)
-    np.save('./logs/ssenet_our.npy', feature_all)
-    np.save('./logs/label.npy', label_all)
-
-
+    # np.save('./logs/ssenet_our.npy', feature_all)
+    # np.save('./logs/label.npy', label_all)
 
     summary = np.array(summary).mean()
     print('[EVAL]', 'curr_acc: %0.3f' % summary)
 
 
 if __name__ == '__main__':
-    sse_dataset = SSEDataset('/data/proli/raw_data/visualization/low_pssm/*.npy',
-                             config.psm_real_data_path_prefix.replace('real', 'fake'),
-                             config.sequence_data_path_prefix.replace('train', 'valid'),
-                             config.label_data_path_prefix.replace('train', 'valid'))
+    psm_files = './low_pssms/*.npy'
+    sse_dataset = SSEDataset(psm_files,
+                             config.psm_fake_data_path_prefix,
+                             config.sequence_data_path_prefix,
+                             config.label_data_path_prefix,)
     sse_loader = DataLoader(sse_dataset, batch_size=1, num_workers=config.batch_size,
                             collate_fn=sse_dataset.collate_fn, shuffle=False)
 
