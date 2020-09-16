@@ -34,8 +34,8 @@ Aboving commend will sample 2000 MSAs from enhanced PSSM file and save in a3ms f
 Please upload two MSA files in 'a3ms' folder to the website: https://weblogo.berkeley.edu/logo.cgi respectively.
 Then you will see such comparison images.
 
-<img src="./img/file5ca7md.png" width="500px"/ alt='low real PSSM'>
-<img src="./img/filelXoHzj.png" width="500px"/ alt='enhanced PSSM'>
+<img src="./img/file5ca7md.png" width="500px" alt='low real PSSM'/>
+<img src="./img/filelXoHzj.png" width="500px" alt='enhanced PSSM'/>
 
 > BC40 dataset
 
