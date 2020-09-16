@@ -34,9 +34,13 @@ Aboving commend will sample 2000 MSAs from enhanced PSSM file and save in a3ms f
 Please upload two MSA files in 'a3ms' folder to the website: https://weblogo.berkeley.edu/logo.cgi respectively.
 Then you will see such comparison images.
 
+![](https://anonymous.4open.science/repository/554521c6-e5a6-4f07-aa6f-8047e8f7a9fd/img/file5ca7md.png)
+![](https://anonymous.4open.science/repository/554521c6-e5a6-4f07-aa6f-8047e8f7a9fd/img/filelXoHzj.png)
+
 > BC40 dataset
 
 https://bit.ly/35mC3Mx
 
 The dataset we released to examine the performance of PSSM-Distil
+
 
