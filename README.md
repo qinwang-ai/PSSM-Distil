@@ -1,5 +1,5 @@
 # PSSM-Distil
-The paper "PSSM-Distil: Protein Secondary Structure Prediction (PSSP) on Low-QualityPSSM by Knowledge Distillation with Contrastive Learning" under review of AAAI Conference
+The paper "PSSM-Distil: Protein Secondary Structure Prediction (PSSP) on Low-QualityPSSM by Knowledge Distillation with Contrastive Learning" of AAAI Conference
 
 > Requirement
 >
