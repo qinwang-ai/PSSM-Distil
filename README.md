@@ -34,7 +34,7 @@ Then you will see such comparison images.
 
 > BC40 dataset
 
-https://drug.ai.tencent.com/protein/bc40/download.html
+https://drive.google.com/drive/folders/15vwRo_OjAkhhwfjDk6-YoKGf4JzZXIMC?usp=sharing
 
 The dataset we released to examine the performance of PSSM-Distil
 
