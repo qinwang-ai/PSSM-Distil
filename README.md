@@ -34,7 +34,7 @@ Then you will see such comparison images.
 
 > BC40 dataset
 
-https://drive.google.com/drive/folders/15vwRo_OjAkhhwfjDk6-YoKGf4JzZXIMC?usp=sharing
+https://drive.google.com/file/d/1e0gfBDLWp--5txWlOGr0Pju1Wd12cg9D/view?usp=sharing
 
 The dataset we released to examine the performance of PSSM-Distil
 
